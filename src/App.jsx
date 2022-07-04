@@ -5,7 +5,6 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState({});
-  const [num, setNum] = useState(true);
   const [temp, setTemp] = useState(true);
 
   // Temperature data
@@ -14,7 +13,6 @@ function App() {
 
   const changeUnit = () => {
     setTemp(!temp);
-    setNum(!num);
   };
 
   useEffect(() => {
@@ -58,7 +56,7 @@ function App() {
               {" "}
               <b>
                 {" "}
-                {num ? cel : far} º{temp ? "C" : "F"}{" "}
+                {temp ? cel : far} º{temp ? "C" : "F"}{" "}
               </b>
             </p>
           </div>
